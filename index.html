@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW GOOD IS YOUR TIME MANAGEMENT ?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .bar {
+            width: 50px;
+            margin: 5px;
+            text-align: center;
+            color: white;
+            display: inline-block;
+        }
+        .bar.red { background-color: red; }
+        .bar.blue { background-color: blue; }
+        .bar.grey { background-color: grey; }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #results, #results * {
+                visibility: visible;
+            }
+            #results {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>HOW GOOD IS YOUR TIME MANAGEMENT?</h1>
+    <p>For each statement, click the button in the column that best describes you. Please answer questions as you actually are (rather than how you think you should be), and don't worry if some questions seem to score in the "wrong direction." When you are finished, please click the "Submit" button at the bottom of the test.</p>
+    <form id="survey-form">
+        <ul>
+            <li>
+                <h4>1. The tasks I work on are the ones with the highest priority.</h4>
+                <label><input type="radio" name="question1" value="1"> Not at all</label>
+                <label><input type="radio" name="question1" value="2"> Rarely</label>
+                <label><input type="radio" name="question1" value="3"> Sometimes</label>
+                <label><input type="radio" name="question1" value="4"> Often</label>
+                <label><input type="radio" name="question1" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>2. I find myself completing tasks at the last minute, or asking for extensions.</h4>
+                <label><input type="radio" name="question2" value="5"> Not at all</label>
+                <label><input type="radio" name="question2" value="4"> Rarely</label>
+                <label><input type="radio" name="question2" value="3"> Sometimes</label>
+                <label><input type="radio" name="question2" value="2"> Often</label>
+                <label><input type="radio" name="question2" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>3. I set aside time for planning and scheduling.</h4>
+                <label><input type="radio" name="question3" value="1"> Not at all</label>
+                <label><input type="radio" name="question3" value="2"> Rarely</label>
+                <label><input type="radio" name="question3" value="3"> Sometimes</label>
+                <label><input type="radio" name="question3" value="4"> Often</label>
+                <label><input type="radio" name="question3" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>4. I know how much time I spend on each of the various tasks I do..</h4>
+                <label><input type="radio" name="question4" value="1"> Not at all</label>
+                <label><input type="radio" name="question4" value="2"> Rarely</label>
+                <label><input type="radio" name="question4" value="3"> Sometimes</label>
+                <label><input type="radio" name="question4" value="4"> Often</label>
+                <label><input type="radio" name="question4" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>5. I find myself dealing with interruptions.</h4>
+                <label><input type="radio" name="question5" value="5"> Not at all</label>
+                <label><input type="radio" name="question5" value="4"> Rarely</label>
+                <label><input type="radio" name="question5" value="3"> Sometimes</label>
+                <label><input type="radio" name="question5" value="2"> Often</label>
+                <label><input type="radio" name="question5" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>6. I use goal setting to decide what tasks and activities I should work on.</h4>
+                <label><input type="radio" name="question6" value="1"> Not at all</label>
+                <label><input type="radio" name="question6" value="2"> Rarely</label>
+                <label><input type="radio" name="question6" value="3"> Sometimes</label>
+                <label><input type="radio" name="question6" value="4"> Often</label>
+                <label><input type="radio" name="question6" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>7. I leave contingency time in my schedule to deal with "the unexpected"?</h4>
+                <label><input type="radio" name="question7" value="1"> Not at all</label>
+                <label><input type="radio" name="question7" value="2"> Rarely</label>
+                <label><input type="radio" name="question7" value="3"> Sometimes</label>
+                <label><input type="radio" name="question7" value="4"> Often</label>
+                <label><input type="radio" name="question7" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>8. I know whether the tasks I am working on are high, medium or low value.</h4>
+                <label><input type="radio" name="question8" value="1"> Not at all</label>
+                <label><input type="radio" name="question8" value="2"> Rarely</label>
+                <label><input type="radio" name="question8" value="3"> Sometimes</label>
+                <label><input type="radio" name="question8" value="4"> Often</label>
+                <label><input type="radio" name="question8" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>9. When I am given a new assignment, I analyze it for importance and prioritize it accordingly.</h4>
+                <label><input type="radio" name="question9" value="1"> Not at all</label>
+                <label><input type="radio" name="question9" value="2"> Rarely</label>
+                <label><input type="radio" name="question9" value="3"> Sometimes</label>
+                <label><input type="radio" name="question9" value="4"> Often</label>
+                <label><input type="radio" name="question9" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>10. I am stressed about deadlines and commitments.</h4>
+                <label><input type="radio" name="question10" value="5"> Not at all</label>
+                <label><input type="radio" name="question10" value="4"> Rarely</label>
+                <label><input type="radio" name="question10" value="3"> Sometimes</label>
+                <label><input type="radio" name="question10" value="2"> Often</label>
+                <label><input type="radio" name="question10" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>11. Distractions keep me from working on critical tasks.</h4>
+                <label><input type="radio" name="question11" value="5"> Not at all</label>
+                <label><input type="radio" name="question11" value="4"> Rarely</label>
+                <label><input type="radio" name="question11" value="3"> Sometimes</label>
+                <label><input type="radio" name="question11" value="2"> Often</label>
+                <label><input type="radio" name="question11" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>12. I have to take work home in order to get it done.</h4>
+                <label><input type="radio" name="question12" value="5"> Not at all</label>
+                <label><input type="radio" name="question12" value="4"> Rarely</label>
+                <label><input type="radio" name="question12" value="3"> Sometimes</label>
+                <label><input type="radio" name="question12" value="2"> Often</label>
+                <label><input type="radio" name="question12" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>13. I prioritize my To-Do List or Action Program.</h4>
+                <label><input type="radio" name="question13" value="1"> Not at all</label>
+                <label><input type="radio" name="question13" value="2"> Rarely</label>
+                <label><input type="radio" name="question13" value="3"> Sometimes</label>
+                <label><input type="radio" name="question13" value="4"> Often</label>
+                <label><input type="radio" name="question13" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>14. I confirm my priorities with my boss.</h4>
+                <label><input type="radio" name="question14" value="1"> Not at all</label>
+                <label><input type="radio" name="question14" value="2"> Rarely</label>
+                <label><input type="radio" name="question14" value="3"> Sometimes</label>
+                <label><input type="radio" name="question14" value="4"> Often</label>
+                <label><input type="radio" name="question14" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>15. Before I take on a task, I check that the results will be worth the time put in.</h4>
+                <label><input type="radio" name="question15" value="1"> Not at all</label>
+                <label><input type="radio" name="question15" value="2"> Rarely</label>
+                <label><input type="radio" name="question15" value="3"> Sometimes</label>
+                <label><input type="radio" name="question15" value="4"> Often</label>
+                <label><input type="radio" name="question15" value="5"> Very Often</label>
+            </li>
+        </ul>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
